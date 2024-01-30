@@ -1,0 +1,81 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color:aliceblue;
+}
+.loader {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* filter: none !important; */
+  }
+.mainpageContainer{
+    width: 60%;
+}
+@media (max-width: 1000px) {
+    .mainpageContainer{
+        width: 100% ;
+    }
+}
+@media (max-width: 500px) {
+    .mainpageContainer{
+        width: 100% ;
+    }
+}
+@media (max-width: 335px) {
+    .mainpageContainer{
+        width: 110% ;
+    }
+    .logo{
+       width: 200px;
+    }
+}
+@media (max-width: 315px) {
+    .mainpageContainer{
+        width: 150% ;
+        margin-left: -40px;
+    }
+    .logo{
+       width: 200px;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+.loginContainer{
+    width: 40%;
+}
+@media (max-width: 1000px) {
+    .loginContainer{
+        width: 50% ;
+    }
+}
+@media (max-width: 500px) {
+    .loginContainer{
+        width: 80% ;
+    }
+}
+@media (max-width: 335px) {
+    .loginContainer{
+        width: 90% ;
+    }
+    .logo{
+       width: 200px;
+    }
+}
+@media (max-width: 315px) {
+    .loginContainer{
+        width: 100% ;
+    }
+    .logo{
+       width: 200px;
+    }
+}
+  
+  #loader {
+    display: inline-block; /* Ensure it takes the same space as the button */
+    font-size: 14px; /* Adjust font size as needed */
+    display: none; /* Initially hidden */
+  }

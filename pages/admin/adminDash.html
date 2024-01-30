@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../techer/style.css">
+    <link rel="stylesheet" type="text/css" href="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="loader">
+        <div class="spinner-grow text-dark"  style="width: 3rem; height: 3rem;" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    <nav class="navbar navbar-expand-lg border-bottom border-secondary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"><img src="../../images/logo.png" alt="" class="img-fluid" width="100px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="mx-2 text-black"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-workspace" viewBox="0 0 16 16">
+                    <path d="M4 16s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-5.95a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+                    <path d="M2 1a2 2 0 0 0-2 2v9.5A1.5 1.5 0 0 0 1.5 14h.653a5.4 5.4 0 0 1 1.066-2H1V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v9h-2.219c.554.654.89 1.373 1.066 2h.653a1.5 1.5 0 0 0 1.5-1.5V3a2 2 0 0 0-2-2z"/>
+                  </svg></li>
+                <li class="ms-1 me-3 nameOfAdmin text-primary d-flex align-items-center"></li>
+            </ul>
+            <form class="d-flex mx-2" role="search">
+              <button id="adminlogout" class="text-primary btn btn-outline-dark" >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
+                    <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h4a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h4A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h4a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h4a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5"/>
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                  </svg>
+                  logout</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Sidebar -->
+      <button class="btn btn-dark d-md-none sidebtn mx-3" onclick="toggleSidebar()"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-layout-sidebar-inset" viewBox="0 0 16 16">
+        <path d="M14 2a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1zM2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2z"/>
+        <path d="M3 4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/>
+      </svg>
+     </button>
+
+      <div class="row container-fluid">
+        <!-- Sidebar -->
+        <div class="col-md-2 bg-dark sidebar" id="sidebar">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#" id="dashboard">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="./allUsers.html" id="users" >Users</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./allTeachers.html" id="teachers" >Teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="./connections.html" id="connections" >Connections</a>
+                </li>
+            </ul>
+        </div>
+      <!-- Main Content -->
+      <div class="col-md-10">
+        <!-- Dashboard Content -->
+        <div id="dashboardContent" class="d-md-flex gap-5 shadow-lg p-3 mb-3  bg-body-tertiary rounded">
+            <!-- Display the number of accepted, rejected, and pending requests -->
+            <div class="container mt-3 border border-dark rounded p-3 col-md-3">
+               <a href="./allUsers.html" style="text-decoration: none;"> 
+                <div class="user">
+                <h4>Users : <span id="userCount">0</span></h4>
+            </div>
+        </a>
+            </div>
+
+            <div class="container mt-3 border border-dark rounded p-3 col-md-3">
+                <a href="./allTeachers.html" style="text-decoration: none;">
+                    <div class="teacher">
+                        <h4>Teachers : <span id="teacherCount">0</span></h4>
+                    </div>
+                </a>
+            </div>
+
+            <div class="container mt-3 border border-dark rounded p-3 col-md-3">
+                <a href="./connections.html" style="text-decoration: none;">
+                    <div class="d-flex">
+                        <div class="connnection">
+                            <h4>Connection : <span id="connectionCount">0</span></h4>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <br><br>
+        <h4 class=" heading w-50 shadow-lg p-3 bg-dark text-light rounded container text-center">
+            Recent Connections</h4>
+        <div class="shadow-lg p-3 bg-dark text-light rounded container connection gap-3">
+        </div>
+    </div>
+</div>
+
+ 
+
+
+    <script src="../../src/DashboardRelatedJS.js"></script> 
+    <script type="module" src="../../src/utils.js"></script>
+    <script type="module" src="../../src/adminDash.js"></script>
+    <script src="https://common.olemiss.edu/_js/sweet-alert/sweet-alert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
+</body>
+</html>
